@@ -1,0 +1,23 @@
+{{>layouts/header}}
+<div class="p-5">
+    <table class="table table-hover text-center" style="border: 1px solid">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>내용</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#articleList}}
+            <tr>
+                <td>{{id}}</td>
+                <td><a href="articles/{{id}}">{{title}}</a></td>
+                <td>{{content}}</td>
+            </tr>
+            {{/articleList}}
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="write">생성</a>
+</div>
+{{>layouts/footer}}
